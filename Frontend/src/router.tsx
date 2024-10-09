@@ -1,9 +1,10 @@
-import { createBrowserRouter } from "react-router-dom";
+import { createBrowserRouter, Navigate } from "react-router-dom";
+import homepageRoutes from './pages/homepage/routes'
 
 export const router = createBrowserRouter([
-
+  ...homepageRoutes,
   {
     path: "/",
-    element: <p style={{padding: "20px", fontSize: "32px", fontWeight: "500"}}>Em construção... 🧱</p>,
+    element: <Navigate to="/homepage" />,
   },
 ]);
