@@ -8,7 +8,7 @@ from importlib import import_module
 
 dotenv.load_dotenv()
 
-connect(host=f"mongodb+srv://{os.getenv('MONGO_USER')}:{os.getenv('MONGO_ PWD')}@@investment-portifolio-v.japd2.mongodb.net/?retryWrites=true&w=majority&appName=Investment-Portifolio-View")
+connect(host=f"mongodb+srv://{os.getenv('MONGO_USER')}:{os.getenv('MONGO_PWD')}@investment-portifolio-v.japd2.mongodb.net/?retryWrites=true&w=majority&appName=Investment-Portifolio-View")
 
 app = FastAPI()
 

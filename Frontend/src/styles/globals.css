@@ -4,68 +4,46 @@
 
 @layer base {
   :root {
-    --background: 0 0% 95%;
-    --foreground: 222.2 84% 4.9%;
+    --background: 0 0% 97%; /* Fundo neutro claro */
 
-    --card: 0 0% 95%; 
-    --card-foreground: 222.2 84% 4.9%;
+    --foreground: 210 30% 20%; /* Tom escuro baseado na paleta */
 
-    --popover: 0 0% 95%; 
-    --popover-foreground: 222.2 84% 4.9%;
+    --card: 0 0% 97%; 
+    --card-foreground: 210 30% 20%;
 
-    --primary: 251 71% 59%;
-    --primary-foreground: 210 40% 98%;
+    --popover: 0 0% 97%; 
+    --popover-foreground: 210 30% 20%;
 
-    --secondary: 248 70% 69%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    --primary: 204 55% 40%; /* #2F709B em HSL */
+    --primary-foreground: 0 0% 100%; /* Branco para contraste */
 
-    --muted: 245 70% 79%; 
-    --muted-foreground: 215.4 16.3% 46.9%;
+    --secondary: 200 28% 69%; /* #8AACC4 em HSL */
+    --secondary-foreground: 210 30% 20%; /* Tom escuro para contraste */
 
-    --accent: 145 59% 61%; 
-    --accent-foreground: 222.2 47.4% 11.2%;
+    --tertiary: 210 100% 20%; /* #003366 em HSL */
+    --tertiary-foreground: 0 0% 100%; /* Branco para contraste */
 
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
+    --quaternary: 192 55% 94%; /* #EEF8FA em HSL */
+    --quaternary-foreground: 210 30% 20%; /* Tom escuro para contraste */
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    --quinary: 210 34% 50%; /* Quinta cor gerada, tom de azul equilibrado */
+
+    --muted: 204 25% 80%; /* Tom neutro azulado */
+    --muted-foreground: 210 30% 20%; /* Tom escuro para contraste */
+
+    --accent: 204 55% 40%; /* Usando a cor primária como destaque */
+    --accent-foreground: 0 0% 100%; /* Branco para contraste */
+
+    --destructive: 0 84.2% 60.2%; /* Vermelho para elementos destrutivos */
+    --destructive-foreground: 0 0% 100%; /* Branco para contraste */
+
+    --border: 204 25% 80%; /* Neutro claro */
+    --input: 204 25% 80%; /* Neutro claro */
+
+    --ring: 204 55% 40%; /* Usando a cor primária para o anel */
 
     --radius: 0.5rem;
-
-    --verde5: 145 59% 61%;
-  }
-
-  .dark {
-    --background: 0 0% 10%;
-    --foreground: 210 40% 98%; 
-
-    --card: 0 0% 10%; 
-    --card-foreground: 210 40% 98%;
-
-    --popover: 0 0% 10%; 
-    --popover-foreground: 210 40% 98%;
-
-    --primary: 251 71% 59%; 
-    --primary-foreground: 210 40% 98%;
-
-    --secondary: 248 70% 69%;
-    --secondary-foreground: 210 40% 98%;
-
-    --muted: 245 70% 79%; 
-    --muted-foreground: 215 20.2% 65.1%;
-
-    --accent: 145 59% 61%; 
-    --accent-foreground: 210 40% 98%; 
-
-    --destructive: 0 62.8% 30.6%; 
-    --destructive-foreground: 210 40% 98%;
-
-    --border: 0 0% 10%; 
-    --input: 0 0% 10%; 
-    --ring: 222.2 84% 4.9%;
-  }
+}
 }
 
 @layer base {
