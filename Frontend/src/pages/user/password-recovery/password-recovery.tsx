@@ -37,7 +37,7 @@ export function PasswordRecovery() {
     toast.success("Senha alterada com sucesso. Redirecionando para o login...");
 
     setTimeout(() => {
-      window.location.href = "/user/login";
+      window.location.href = "/login";
     }, 3000);
   }
 

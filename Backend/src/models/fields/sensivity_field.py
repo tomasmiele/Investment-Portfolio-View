@@ -16,11 +16,11 @@ class SensivityField(EmbeddedDocument):
             return
         
         if isinstance(data, list):
-            self.token = [fernet.encrypt(item.encode()).decode() for item in data]
-            self.comparison_hash = [encode_hmac_hash(item) for item in data]
+            self.token = [fernet.encrypt(str(item).encode()).decode() for item in data]
+            self.comparison_hash = [encode_hmac_hash(str(item)) for item in data]
         else:
-            self.token = fernet.encrypt(data.encode()).decode()
-            self.comparison_hash = encode_hmac_hash(data)
+            self.token = fernet.encrypt(str(data).encode()).decode()
+            self.comparison_hash = encode_hmac_hash(str(data))
 
     def verify(self, data: str) -> bool:
         return encode_hmac_hash(data) == self.comparison_hash

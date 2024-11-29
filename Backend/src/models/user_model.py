@@ -10,9 +10,7 @@ dotenv.load_dotenv()
 fernet = Fernet(os.getenv("FERNET_SECRET_KEY"))
 
 class UsersModel(Document):
-    sensivity_fields = [
-        
-    ]
+    sensivity_fields = []
 
     name = StringField(required=True)
     email = StringField(required=True, unique=True)

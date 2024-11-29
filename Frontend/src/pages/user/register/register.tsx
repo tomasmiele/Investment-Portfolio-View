@@ -4,7 +4,6 @@ import toast from "react-hot-toast";
 import { registerApi } from "./api/register";
 import { Input } from "../../../components/ui/input";
 import { Button } from "../../../components/ui/button";
-import { ReloadIcon } from "@radix-ui/react-icons";
 import nome from "../../../assets/IPV_nome.png";
 
 export function Register() {
@@ -15,7 +14,7 @@ export function Register() {
 
   async function register() {
     if (!email || !password) {
-      toast.error("Preencha todas as informações corretamente.");
+      toast.error("Fill in all information correctly");
       return;
     }
 
@@ -24,7 +23,7 @@ export function Register() {
     setLoading(false);
 
     if (responseData.status !== "success") {
-      toast.error(responseData.message ?? "Erro ao tentar fazer o cadastro");
+      toast.error(responseData.message ?? "Error when trying to register");
       return;
     }
 
@@ -60,15 +59,14 @@ export function Register() {
           <CustomButton disabled={loading} onClick={() => register()}>
             {loading ? (
               <>
-                <ReloadIcon className="mr-2 h-4 w-4 animate-spin" />
-                Processando...
+                Processing...
               </>
             ) : (
-              "Cadastre-se"
+              "Register"
             )}
           </CustomButton>
 
-          <LoginButton onClick={() => login()}>Já possui uma conta? Log in</LoginButton>
+          <LoginButton onClick={() => login()}>Already have an account? Log in</LoginButton>
         </FormContainer>
       </RegisterSection>
     </RegisterPage>

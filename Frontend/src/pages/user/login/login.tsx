@@ -14,7 +14,6 @@ import {
 } from "../../../components/ui/alert-dialog";
 import { loginApi } from "./api/login";
 import { sendPwdRecoveryEmailApi } from "./api/send-pwd-recovery-email"
-import { ReloadIcon } from "@radix-ui/react-icons";
 import nome from "../../../assets/IPV_nome.png";
 
 export function Login() {
@@ -25,7 +24,7 @@ export function Login() {
 
   async function login() {
     if (!email || !password) {
-      toast.error("Preencha todas as informações corretamente.");
+      toast.error("Fill in all information correctly");
       return;
     }
 
@@ -34,7 +33,7 @@ export function Login() {
     setLoading(false);
 
     if (responseData.status !== "success") {
-      toast.error(responseData.message ?? "Erro ao tentar fazer login");
+      toast.error(responseData.message ?? "Error when trying to log in");
       return;
     }
 
@@ -44,7 +43,7 @@ export function Login() {
 
   async function sendPasswordRecoveryEmail() {
     if (!recoveryEmail) {
-      toast.error("Digite um email válido!");
+      toast.error("Enter a valid email!");
       return;
     }
 
@@ -84,11 +83,10 @@ export function Login() {
           <CustomButton disabled={loading} onClick={() => login()}>
             {loading ? (
               <>
-                <ReloadIcon className="mr-2 h-4 w-4 animate-spin" />
-                Processando...
+                Processing...
               </>
             ) : (
-              "Fazer login"
+              "Log in"
             )}
           </CustomButton>
 
